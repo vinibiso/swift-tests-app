@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  {# Include here the fisrt thing you want to appear #}
+  {# {% include "load/loading.html" %}#}
+  <!-- Loading Template -->
+  <script id="loading-tpl" type="text/template">
+    {% include "load/loading.html" %}
+  </script>
+  <script id="sync-tpl" type="text/template">
+    {% include "load/syncing.html" %}
+  </script>
+  <script id="wait-tpl" type="text/template">
+    {% include "load/waiting.html" %}
+  </script>
+  <script id="thanks-tpl" type="text/template">
+    {% include "load/thanks.html" %}
+  </script>
+  <!-- Main Template -->
+  <script id="name-tpl" type="text/template">
+    {% include "exam/name.html" %}
+  </script>
+  <script id="question-tpl" type="text/template">
+    {% include "exam/question.html" %}
+  </script>
+  <script id="answers-tpl" type="text/template">
+    {% include "exam/answers.html" %}
+  </script>
+</body>
+{# Here goes all you programming code #}
+<script src="main.js"></script>
+{# DO NOT REMOVE - Here goes Cordova Scripts for android build of thigst such as native alerts #}
+<script src="cordova.js"></script>
+</html>
