@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    shell = require('gulp-shell'),
     plumber = require('gulp-plumber'),
     webserver = require('gulp-webserver'),
     postcss = require('gulp-postcss'),

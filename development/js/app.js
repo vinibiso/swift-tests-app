@@ -1,4 +1,5 @@
 var testDone = false;
+var test = null;
 var exam = null;
 (function() {
     /* ---------------------------------- Local Variables ---------------------------------- */
@@ -33,7 +34,7 @@ var exam = null;
     });
 
     router.addRoute('exam', function() {
-        $("body").html(new ExamView(nameTemplate, examTemplate, answersTemplate).html);
+        $("body").html(new ExamView(exam, nameTemplate, questionTemplate, answersTemplate).html);
     });
 
     router.addRoute('thanks', function() {

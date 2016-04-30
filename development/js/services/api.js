@@ -39,7 +39,7 @@ function API_Request(url, data, success_fun) {
           $.ajax({
             type: "POST",
             crossDomain: true,
-            url: url,
+            url: API_URL+url,
             data: data,
             datatype: "json",
             success: function (response) {
