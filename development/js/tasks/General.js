@@ -93,3 +93,8 @@ Handlebars.registerHelper('date', function(date) {
     return "Não Enviado";
   }
 });
+
+Handlebars.registerHelper('letter', function(number) {
+  var list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q'];
+  return list[number-1];
+});

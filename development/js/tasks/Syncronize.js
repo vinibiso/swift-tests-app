@@ -6,12 +6,11 @@ var Syncronize = (function() {
         location.hash = "wait";
       } else {
         console.log("GOT TEST!");
-        console.log(response);
         exam = response.exam;
         location.hash = "exam";
       }
     });
   } else {
-    location.hash = "thanks";
+    location.hash = "done";
   }
 });

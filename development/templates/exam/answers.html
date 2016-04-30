@@ -1,0 +1,15 @@
+{% raw %}
+<span id="previous">Voltar</span>
+
+{{#each answers}}
+  <div>
+    <b><span>{{ letter question.number }}) {{ question.text }}</span></b>
+    <br>
+    <span>{{ letter alternative.number }}) {{ alternative.text }}</span>
+  </div> <br><br>
+  {{/each}}
+</div>
+
+<br><br><br>
+<span id="done-exam">Finalizar!</span>
+{% endraw %}

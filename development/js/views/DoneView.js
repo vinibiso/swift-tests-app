@@ -1,12 +1,11 @@
-var ThanksView = (function(e, t) {
+var DoneView = (function(t) {
 
     $el = $('<div/>');
     template = t;
-    exam = e;
     render();
 
     function render() {
-        $el.html(template(exam));
+        $el.html(template());
     }
 
     return {"render": render, "html": $el};

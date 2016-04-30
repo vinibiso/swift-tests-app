@@ -74,7 +74,7 @@ gulp.task('htmls', function() {
 gulp.task('scripts', function() {
     return gulp.src(PATHS.jsOrder)
         .pipe(concat('main.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest(PATHS.jsDestination));
 });
 

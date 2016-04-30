@@ -1,0 +1,17 @@
+{% raw %}
+{{#if has_previous }}
+  <span id="previous">Voltar</span>
+{{/if}}
+
+<div class="container">
+  <h3>{{ letter number }}) {{ text }}:</h3>
+  <div class="answer-container">
+    {{#each alternatives}}
+    <div class="simple-answer" onclick="examView.selectAlternative({{id}})">
+      <span class="simple-answer--letter">{{ letter number }}</span>
+      <span class="simple-answer--text">{{ text }}</span>
+    </div>
+    {{/each}}
+  </div>
+</div>
+{% endraw %}

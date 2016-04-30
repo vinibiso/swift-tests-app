@@ -1,6 +1,7 @@
 var testDone = false;
 var test = null;
 var exam = null;
+var examView = null;
 (function() {
     /* ---------------------------------- Local Variables ---------------------------------- */
     handleMessagesAddon = "<script>{{#if message }} var message = '{{message}}'; alert(message); {{/if }}</script>";
@@ -9,6 +10,7 @@ var exam = null;
     var syncTemplate = Handlebars.compile($("#sync-tpl").html());
     var waitTemplate = Handlebars.compile($("#wait-tpl").html());
     var thanksTemplate = Handlebars.compile($("#thanks-tpl").html());
+    var doneTemplate = Handlebars.compile($("#done-tpl").html());
     // Main Templates
     var questionTemplate = Handlebars.compile($("#question-tpl").html());
     var answersTemplate = Handlebars.compile($("#answers-tpl").html());
@@ -34,11 +36,16 @@ var exam = null;
     });
 
     router.addRoute('exam', function() {
-        $("body").html(new ExamView(exam, nameTemplate, questionTemplate, answersTemplate).html);
+        examView = new ExamView(exam, nameTemplate, questionTemplate, answersTemplate);
+        $("body").html(examView.html);
     });
 
     router.addRoute('thanks', function() {
-        $("body").html(new ThanksView(thanksTemplate).html);
+        $("body").html(new ThanksView(exam, thanksTemplate).html);
+    });
+
+    router.addRoute('done', function() {
+        $("body").html(new DoneView(doneTemplate).html);
     });
 
     router.start();
