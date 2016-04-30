@@ -36,7 +36,7 @@ var examView = null;
     });
 
     router.addRoute('exam', function() {
-        examView = new ExamView(exam, nameTemplate, questionTemplate, answersTemplate);
+        examView = new ExamView(exam, nameTemplate, questionTemplate, answersTemplate, thanksTemplate);
         $("body").html(examView.html);
     });
 

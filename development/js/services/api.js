@@ -8,7 +8,7 @@
 //    Logs full error
 function API_com_error(e) {
   console.log(e);
-  alert("Ocorreu um erro de comunicação");
+  console.log("Ocorreu um erro de comunicação");
 }
 
 // FUNCTION - Show user that server is not available

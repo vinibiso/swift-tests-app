@@ -1,15 +1,18 @@
-var ExamView = (function(e, name_t, question_t, answers_t) {
+var ExamView = (function(e, name_t, question_t, answers_t, thanks_t) {
 
     var $el = $('<div/>');
     $el.on('click', '#previous', previous);
     $el.on('click', '#start-exam', getName);
     $el.on('click', '#done-exam', syncVote);
     var start = true;
+    var intervalID = null;
+    var voteSent = false;
     var exam = e;
     var counter = 0;
     var nameTemplate = name_t;
     var questionTemplate = question_t;
     var answersTemplate = answers_t;
+    var thanksTemplate = thanks_t;
     var answer = {
       "exam": exam.id,
       "name": "",
@@ -69,8 +72,26 @@ var ExamView = (function(e, name_t, question_t, answers_t) {
     }
 
     function syncVote() {
-        console.log("HERE WE SYNC");
-        location.hash = "thanks";
+        console.log("SENDING VOTE!");
+        sendVote();
+        testDone = true;
+        $el.html(thanksTemplate(exam));
+        intervalID = setInterval(function () {
+            if (!voteSent) {
+                console.log("VOTE NOT SENT! TRYING AGAIN");
+                sendVote();
+            } else {
+                console.log("VOTE SENT! CLEARING INTERVAL");
+                clearInterval(intervalID);
+                location.hash = "done";
+            }
+        }, 5000);
+    }
+
+    function sendVote() {
+        API_Request("/receive_vote/", {"answer": JSON.stringify(answer)}, function(response) {
+            voteSent = true;
+        });
     }
 
     return {"render": render, "html": $el, "selectAlternative": selectAlternative};
