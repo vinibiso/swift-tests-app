@@ -18,6 +18,10 @@ var examView = null;
 
     router.addRoute('', function() {
         $("body").html(new LoadingView(loadingTemplate).html);
+        var ip = prompt("Por favor insira o endereço do servidor de prova.", "127.0.0.1");
+        if (ip.length > 7) {
+            API_URL = "http://"+ip+":8080/api";
+        }
         location.hash = "wait";
     });
 

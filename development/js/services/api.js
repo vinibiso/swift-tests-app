@@ -1,5 +1,5 @@
 // GLOBAL-VARIABLE - Keeps, API URL
-  var API_URL = "http://localhost:8080/api";
+var API_URL = "http://localhost:8080/api";
 
 // FUNCTION - Handles Generic Comunication errors
 // NO INPUT
