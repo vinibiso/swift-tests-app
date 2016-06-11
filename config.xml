@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.layer.supervisor" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.biso.swift-tests" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <icon src="res/icon.png" />
-    <name>APP Name here</name>
+    <name>SwiftTests</name>
     <description>
-        APP Description Here
+      App that get and runs a test based on the swift test web server
     </description>
-    <author email="contato@layerdesign.com.br" href="http://layerdesign.com.br">
-        Layer
+    <author email="vinibiso@gmail.com" href="http://vocesugere.com.br">
+        Vinicius Bisognin Immich
     </author>
     <content src="index.html" />
     <access origin="*" />
