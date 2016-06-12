@@ -27,6 +27,7 @@ function API_not_on() {
 // PS:
 //    Only calls success_fun if no errors ocurred
 function API_Request(url, data, success_fun) {
+  console.log(API_URL);
   $.ajax({
       type: "POST",
       crossDomain: true,

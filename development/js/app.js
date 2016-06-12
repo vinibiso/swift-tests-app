@@ -22,6 +22,7 @@ var examView = null;
         if (ip.length > 7) {
             API_URL = "http://"+ip+":8080/api";
         }
+         API_URL = "http://192.168.1.104:8080/api";
         location.hash = "wait";
     });
 
