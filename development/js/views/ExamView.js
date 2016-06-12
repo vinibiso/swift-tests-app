@@ -44,7 +44,7 @@ var ExamView = (function(e, name_t, question_t, answers_t, thanks_t) {
                     }
                     answers.push(a);
                 }
-                template = answersTemplate({"answers": answers});
+                template = answersTemplate({"answers": answers, "answer": answer, "exam": exam});
             }
         }
         $el.html(template);

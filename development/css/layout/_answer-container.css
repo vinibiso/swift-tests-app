@@ -1,0 +1,6 @@
+.answer-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 25px 0;
+}

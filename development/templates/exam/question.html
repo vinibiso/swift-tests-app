@@ -1,15 +1,27 @@
 {% raw %}
-{{#if has_previous }}
-  <span id="previous">Voltar</span>
-{{/if}}
+<nav class="navigation">
+  {{#if has_previous }}
+    <div class="navigation--action" id="previous">
+      <div class="navigation-action--icon">
+      </div>
+      <div class="navigation-action--label">
+        <span>Voltar</span>
+      </div>
+    </div>
+  {{/if}}
+</nav>
 
 <div class="container">
   <h3>{{ letter number }}) {{ text }}:</h3>
   <div class="answer-container">
     {{#each alternatives}}
     <div class="simple-answer" onclick="examView.selectAlternative({{id}})">
-      <span class="simple-answer--letter">{{ letter number }}</span>
-      <span class="simple-answer--text">{{ text }}</span>
+      <div class="simple-answer--letter">
+        <span>{{ letter number }}</span>
+      </div>
+      <div class="simple-answer--text">
+        <span>{{ text }}</span>
+      </div>
     </div>
     {{/each}}
   </div>

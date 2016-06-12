@@ -1,0 +1,37 @@
+$card-image-height: 75px;
+
+.simple-answer {
+  width: calc(100% * (1/2) - 75px);
+  height: $card-image-height;
+  background: $white;
+  cursor: pointer;
+  margin: 25px 35px;
+}
+
+.simple-answer--letter {
+  width: 75px;
+  height: $card-image-height;
+  float: left;
+  background: $accent-color;
+  text-align: center;
+  overflow: hidden;
+
+  span {
+    display: block;
+    font-size: 3.0rem;
+    font-weight: 500;
+    color: $white;
+    text-transform: uppercase;
+    transform: translateY(15px);
+  }
+}
+
+.simple-answer--text {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  font-weight: 500;
+  color: $black;
+  padding-top: 9px;
+  padding-left: 15px;
+  overflow: hidden;
+}

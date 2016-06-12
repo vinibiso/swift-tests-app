@@ -1,5 +1,14 @@
-Pronto para começar a responder {{ name }}?
-<br>
-Insira seu nome <br>
-<input type="text" id="name" value=""> <br>
-<button id="start-exam">Começar Prova!</button>
+{% raw %}
+<h3>Pronto para começar a responder {{ name }}?</h3>
+<div class="form-block">
+  <input class="form-block--input" type="text" id="name" value="">
+  <label class="form-block--label" for="name">Insira seu nome</label>
+</div>
+<div class="button-container--onbottom">
+  <div class="raised-button raised-button--onbottom" id="start-exam" role="button">
+    <div class="flex-wrapper">
+      <span>Começar Prova!</span>
+    </div>
+  </div>
+</div>
+{% endraw %}

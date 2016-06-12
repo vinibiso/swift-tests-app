@@ -1,0 +1,21 @@
+/* Color */
+$primary-color: #00BCD4;
+$accent-color: #304FFE;
+$accent-color--tint: #3D5AFE;
+$success-color: #2DB331;
+$success-color--tint: #2DB331;
+$warning-color: #F44336;
+$warning-color--tint: #EF5350;
+$black: rgba(0,0,0,0.87);
+$grey: rgba(0,0,0,0.54);
+$divider-color: rgba(0,0,0,0.12);
+$white: #fff;
+
+/* Default Transition */
+$consistent-transition: all 200ms cubic-bezier(.22,.61,.36,1);
+$consistent-shadow: 0 6px 12px rgba(0,0,0,0.16);
+
+/* Media Queries */
+$large-screen: 1600px;
+$medium-screen: 760px;
+$small-screen: 320px;

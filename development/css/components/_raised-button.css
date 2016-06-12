@@ -1,0 +1,58 @@
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.raised-button {
+  display: inline-block;
+  font-size: 1.6rem;
+  background: $accent-color;
+  padding: 0.8rem 2.5rem;
+  cursor: pointer;
+  transform: translateY(0);
+  border: none;
+  box-shadow: $consistent-shadow;
+  transition: $consistent-transition;
+  user-select: none;
+
+  i {
+    color: $white;
+    margin-right: 10px;
+    transform: translateY(-1px);
+  }
+
+  span {
+    font-family: 'Helvetica';
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $white;
+    transform: translateY(2px);
+  }
+
+  &:hover, &:focus {
+    background: $accent-color--tint;
+    box-shadow: 2px 8px 16px rgba(0,0,0,0.16);
+  }
+}
+
+.raised-button--green {
+  background: $success-color;
+
+  &:hover, &:focus {
+    background: $success-color--tint;
+    box-shadow: 2px 8px 16px rgba(0,0,0,0.16);
+  }
+}
+
+.button-container--onbottom {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+
+  .raised-button {
+    margin: 0 25px;
+  }
+}

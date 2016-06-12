@@ -1,15 +1,29 @@
 {% raw %}
-<span id="previous">Voltar</span>
-
-{{#each answers}}
-  <div>
-    <b><span>{{ letter question.number }}) {{ question.text }}</span></b>
-    <br>
-    <span>{{ letter alternative.number }}) {{ alternative.text }}</span>
-  </div> <br><br>
+<nav class="navigation">
+    <div class="navigation--action" id="previous">
+      <div class="navigation-action--icon">
+      </div>
+      <div class="navigation-action--label">
+        <span>Voltar</span>
+      </div>
+    </div>
+</nav>
+<h3>Prova: {{ exam.name }}</h3>
+<h4>Nome: {{ answer.name }}</h4>
+<ul class="answers">
+  {{#each answers}}
+  <li class="answers__item">
+    <span class="answers__question">{{ letter question.number }}) {{ question.text }}</span>
+    <span class="answers__answer">{{ alternative.text }}</span>
+  </li>
   {{/each}}
-</div>
+</ul>
 
-<br><br><br>
-<span id="done-exam">Finalizar!</span>
+<div class="button-container--onbottom">
+  <div class="raised-button" id="done-exam" role="button">
+    <div class="flex-wrapper">
+      <span>Finalizar!</span>
+    </div>
+  </div>
+</div>
 {% endraw %}

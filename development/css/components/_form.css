@@ -1,0 +1,25 @@
+.form-block {
+  width: 50%;
+  margin: auto;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.form-block--input {
+  @mixin font-smooth;
+  width: 100%;
+  background: none;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  font-size: 2.4rem;
+  text-align: center;
+  color: $white;
+}
+
+.form-block--label {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+}

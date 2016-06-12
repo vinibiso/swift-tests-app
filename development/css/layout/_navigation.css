@@ -1,0 +1,31 @@
+.navigation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.navigation--action {
+  display: inline-block;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: $consistent-transition;
+  opacity: 0.7;
+  margin: 20px 20px 0 20px;
+}
+
+.navigation-action--icon {
+  display: inline-block;
+  color: $white;
+  margin-right: 10px;
+  transform: translateY(5px);
+}
+
+.navigation-action--label {
+  @mixin font-smooth;
+  display: inline-block;
+  font-family: 'Helvetica';
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: $white;
+}

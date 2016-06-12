@@ -1,0 +1,33 @@
+.answers {
+  width: 40%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.answers__item {
+  list-style: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 10px 10px;
+}
+
+.answers__question {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.answers__answer {
+  font-size: 2.0rem;
+  padding-left: 30px;
+}
+
+.answers__answer:before {
+  display: inline-block;
+  content: "";
+  height: 20px;
+  width: 30px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  margin-right: 10px;
+  opacity: 0.6;
+}
