@@ -3,4 +3,3 @@ platforms/**/*
 node_modules
 production
 www
-builds
